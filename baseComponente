@@ -1,0 +1,9 @@
+import { VStack } from 'native-base'
+import React from 'react'
+
+export function Index() {
+  return (
+    <VStack>
+    </VStack>
+  )
+}
