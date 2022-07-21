@@ -5,12 +5,38 @@ import Logo from '../../assets/logo_primary.svg'
 import { Button } from "../../components/button";
 import { Input } from "../../components/input";
 
+import auth from '@react-native-firebase/auth'
+import { Alert } from "react-native";
+
 export function SignIn () {
+    const [isLoading, setIsLoading] = useState(false)
     const [user, setUser] = useState('')
     const [password, setPassword] = useState('')
     const {colors} = useTheme()
 
     function handleSignIn () {
+        if(!user || !password){
+            return Alert.alert("Entrar", "informe e-mail e senha")
+        }
+
+        setIsLoading(true)
+
+        auth()
+        .signInWithEmailAndPassword(user, password)
+        .catch((error)=> {
+            console.log(error)
+            setIsLoading(false)
+
+            if(error.code === 'auth/user-not-found' || error.code ==='auth/wrong-password'){
+                return Alert.alert('Entrar', 'E-mail ou senha inválido.')
+            }
+            if(error.code === 'auth/invalid-email'){
+                return Alert.alert('Entrar', 'e-mail inválido.')
+            }
+
+            return Alert.alert('Entrar', 'Não foi possível acessar')
+        })
+
         console.log(user, password)
     }
     return (
@@ -39,6 +65,7 @@ export function SignIn () {
             title="Entrar" 
             w="full" 
             onPress={handleSignIn}
+            isLoading={isLoading}
             />
         </VStack>
     )

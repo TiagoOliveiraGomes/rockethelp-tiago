@@ -1,4 +1,4 @@
-package com.rockethelptiago.newarchitecture.modules;
+package com.rockethelpTiago.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

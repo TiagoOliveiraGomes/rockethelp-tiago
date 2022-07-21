@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "783030230872",
+    "project_id": "rockethelpt",
+    "storage_bucket": "rockethelpt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783030230872:android:ec80b06ee6b865ee280f2d",
+        "android_client_info": {
+          "package_name": "com.rockethelpTiago"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "783030230872-llklaket6hqqi1ks7gcs3ac326tufoib.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWKRDMxc8ZkiWZMYff74kfXfF29EdfWOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "783030230872-llklaket6hqqi1ks7gcs3ac326tufoib.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "783030230872-6rq20k4n0ekibiu5uag6lfm0d2qgujp3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.rockethelpTiago"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
